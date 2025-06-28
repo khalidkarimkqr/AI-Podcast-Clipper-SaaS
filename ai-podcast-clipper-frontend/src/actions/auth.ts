@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use server";
 
 import { hashPassword } from "~/lib/auth";
@@ -35,12 +34,11 @@ export async function signUp(data: SignupFormValues): Promise<SignupResult> {
 
     const hashedPassword = await hashPassword(password);
 
-    // const stripe = new Stripe(env.STRIPE_SECRET_KEY);
+    const stripe = new Stripe(env.STRIPE_SECRET_KEY);
 
-    // const stripeCustomer = await stripe.customers.create({
-    //   email: email.toLowerCase(),
-    // });
-    const stripeCustomer = { id: "test_dummy_id" };
+    const stripeCustomer = await stripe.customers.create({
+      email: email.toLowerCase(),
+    });
 
     await db.user.create({
       data: {

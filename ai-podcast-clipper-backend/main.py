@@ -32,7 +32,7 @@ image = (modal.Image.from_registry(
     .pip_install_from_requirements("requirements.txt")
     .run_commands(["mkdir -p /usr/share/fonts/truetype/custom",
                    "wget -O /usr/share/fonts/truetype/custom/Anton-Regular.ttf https://github.com/google/fonts/raw/main/ofl/anton/Anton-Regular.ttf",
-                   "fc-cache -f -v"])
+                   "fc-cache -f -v",])
     .add_local_dir("asd", "/asd", copy=True))
 
 app = modal.App("ai-podcast-clipper", image=image)
@@ -197,10 +197,10 @@ def create_subtitles_with_ffmpeg(transcript_segments: list, clip_start: float, c
 
     subs = pysubs2.SSAFile()
 
-    subs.info["WrapStyle"] = 0 # type: ignore
+    subs.info["WrapStyle"] = 0
     subs.info["ScaledBorderAndShadow"] = "yes"
-    subs.info["PlayResX"] = 1080 # type: ignore
-    subs.info["PlayResY"] = 1920 # type: ignore
+    subs.info["PlayResX"] = 1080
+    subs.info["PlayResY"] = 1920
     subs.info["ScriptType"] = "v4.00+"
 
     style_name = "Default"
