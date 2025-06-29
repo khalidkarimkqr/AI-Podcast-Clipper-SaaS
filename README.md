@@ -27,8 +27,8 @@
 
 <div align="center">
   <!-- Replace these paths with your actual image paths -->
-  <img src="images/img5.png" width="55%" />
-  <img src="images/img6.png" width="55%" />
+  <img src="images/img5.png" width="90%" /> <br> </br>
+  <img src="images/img6.png" width="90%" />
 </div>
 
 ---
@@ -105,8 +105,8 @@ Here's a quick preview of how everything connects under the hood — from video 
 ### Serverless GPU + Stripe Purchase Flow
 
 <div align="center">
-  <img src="./images/img3.png" width="49%" />
-  <img src="./images/img4.png" width="49%" />
+  <img src="./images/img3.png" width="57%" />
+  <img src="./images/img4.png" width="42%" />
 </div>
 
 ---
