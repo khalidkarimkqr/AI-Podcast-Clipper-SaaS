@@ -27,8 +27,8 @@
 
 <div align="center">
   <!-- Replace these paths with your actual image paths -->
-  <img src="images/img5.png" width="49%" />
-  <img src="images/img6.png" width="49%" />
+  <img src="images/img5.png" width="55%" />
+  <img src="images/img6.png" width="55%" />
 </div>
 
 ---
