@@ -2,28 +2,62 @@
 
 # 🎙️ AI Podcast Clipper
 
-**Turn full podcasts into ready-to-post vertical clips for TikTok, YouTube Shorts, or Reels.**
+**Upload full podcasts. Get short, viral clips ready to post — with subtitles, speaker cropping, and GPU-accelerated rendering.**
 
-End-to-end SaaS built with AI transcription, LLM-powered viral moment detection, speaker-aware cropping, GPU-accelerated rendering, credit-based queuing, and Stripe payments.
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)]()
+[![React](https://img.shields.io/badge/React-1E90FF?style=for-the-badge&logo=react&logoColor=white)]()
+[![Python](https://img.shields.io/badge/Python-F7C52C?style=for-the-badge&logo=python&logoColor=black)]()
+[![FastAPI](https://img.shields.io/badge/FastAPI-00B894?style=for-the-badge&logo=fastapi&logoColor=white)]()
+[![Modal](https://img.shields.io/badge/Modal.dev-8E44AD?style=for-the-badge&logo=docker&logoColor=white)]()
+[![Stripe](https://img.shields.io/badge/Stripe-6772E5?style=for-the-badge&logo=stripe&logoColor=white)]()
+[![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)]()
+[![Inngest](https://img.shields.io/badge/Inngest-5C33FF?style=for-the-badge&logo=serverless&logoColor=white)]()
+
+<br/>
+
+**Deployed App:** [https://your-live-app-link.com](https://ai-podcast-clipper-frontend-kk.vercel.app/)  
+<br/>
 
 </div>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-1E90FF?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-00B894?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-F7C52C?style=for-the-badge&logo=python&logoColor=black" />
-  <img src="https://img.shields.io/badge/Modal.dev-8E44AD?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Stripe-6772E5?style=for-the-badge&logo=stripe&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Inngest-5C33FF?style=for-the-badge&logo=serverless&logoColor=white" />
-  
-</p>
+> **Note** — This project runs fully serverless with GPU processing on Modal and async background execution via Inngest.  
+> Built to be scalable, cloud-native, and entirely free-tier friendly.
 
+---
 
+<div align="center">
+  <!-- Replace these paths with your actual image paths -->
+  <img src="images/img5.png" width="49%" />
+  <img src="images/img6.png" width="49%" />
+</div>
 
+---
 
+<details>
+<summary>📜 Table of Contents</summary>
 
+- [Overview](#overview)
+- [Project Flow (Preview)](#-project-flow-preview)
+  - [Clip Creation + Queue System](#-clip-creation--queue-system)
+  - [Serverless GPU + Stripe Purchase Flow](#-serverless-gpu--stripe-purchase-flow)
+- [Tech Stack](#-tech-stack)
+- [Setup](#setup)
+  - [Clone the Repository](#clone-the-repository)
+  - [Install Python](#install-python)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+  - [Queue](#queue)
+- [AWS Setup](#aws-setup)
+- [LLM for viral moment identification](#llm-for-viral-moment-identification)
+- [Videos used for testing / thumbnail](#videos-used-for-testing--thumbnail)
+- [Flow: How it Works](#-flow-how-it-works)
+- [Credit System](#-credit-system)
+- [Stripe Purchase Flow](#-stripe-purchase-flow)
+- [Background Queue (Inngest)](#-background-queue-inngest)
+- [Extra Notes](#-extra-notes)
+- [Coming Soon](#-coming-soon)
+
+</details>
 
 ---
 
@@ -50,7 +84,6 @@ Features
 - 🌐 FastAPI backend for processing and transcribing
 - ☁️ Uses AWS S3 for video storage and clip output
 
-
 ## 📊 Project Flow (Preview)
 
 Here's a quick preview of how everything connects under the hood — from video upload, clip generation, queue processing, to Stripe purchases and serverless GPUs.
@@ -60,29 +93,35 @@ Here's a quick preview of how everything connects under the hood — from video 
 
 ---
 
-### 🎬 Clip Creation + Queue System
+### Clip Creation + Queue System
 
-[![Clip flow preview](./images/clip-flow.png)](./images/clip-flow.png)
+<div align="center">
+  <img src="./images/img1.png" width="49%" />
+  <img src="./images/img2.png" width="49%" />
+</div>
 
 ---
 
-### ⚙️ Serverless GPU + Stripe Purchase Flow
+### Serverless GPU + Stripe Purchase Flow
 
-[![GPU + Stripe preview](./images/stripe-flow.png)](./images/stripe-flow.png)
+<div align="center">
+  <img src="./images/img3.png" width="49%" />
+  <img src="./images/img4.png" width="49%" />
+</div>
 
 ---
 
 ## 🔧 Tech Stack
 
-| Layer       | Stack                                                     |
-|-------------|-----------------------------------------------------------|
-| Frontend    | Next.js 15, React, Tailwind, ShadCN UI                    |
-| Backend     | FastAPI (Python), Modal (serverless GPU runtime)         |
-| AI & Video  | WhisperX, Gemini 2.5, LR-RSD, FFmpeg, OpenCV             |
-| Infra       | Modal, AWS S3, Inngest queue (async task orchestration)  |
-| Auth        | Custom Auth with email/password validation               |
-| Payments    | Stripe Checkout + Webhooks                               |
-| Storage     | S3 (Original videos + generated clips)                   |
+| Layer      | Stack                                                   |
+| ---------- | ------------------------------------------------------- |
+| Frontend   | Next.js 15, React, Tailwind, ShadCN UI                  |
+| Backend    | FastAPI (Python), Modal (serverless GPU runtime)        |
+| AI & Video | WhisperX, Gemini 2.5, LR-RSD, FFmpeg, OpenCV            |
+| Infra      | Modal, AWS S3, Inngest queue (async task orchestration) |
+| Auth       | Custom Auth with email/password validation              |
+| Payments   | Stripe Checkout + Webhooks                              |
+| Storage    | S3 (Original videos + generated clips)                  |
 
 ---
 
@@ -303,7 +342,6 @@ IAM user policy to upload, download and list bucket items:
 - Can scale dynamically
 
 ---
-
 
 ## ✅ Extra Notes
 
