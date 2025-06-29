@@ -5,7 +5,7 @@
 **Upload full podcasts. Get short, viral clips ready to post — with subtitles, speaker cropping, and GPU-accelerated rendering.**
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)]()
-[![React](https://img.shields.io/badge/React-1E90FF?style=for-the-badge&logo=react&logoColor=white)]()
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 [![Python](https://img.shields.io/badge/Python-F7C52C?style=for-the-badge&logo=python&logoColor=black)]()
 [![FastAPI](https://img.shields.io/badge/FastAPI-00B894?style=for-the-badge&logo=fastapi&logoColor=white)]()
 [![Modal](https://img.shields.io/badge/Modal.dev-8E44AD?style=for-the-badge&logo=docker&logoColor=white)]()
@@ -15,7 +15,8 @@
 
 <br/>
 
-**Deployed App:** [Live Demo](https://ai-podcast-clipper-frontend-kk.vercel.app/)  
+**Deployed App:** [Click to view the app](https://ai-podcast-clipper-frontend-kk.vercel.app/)  
+
 <br/>
 
 </div>
