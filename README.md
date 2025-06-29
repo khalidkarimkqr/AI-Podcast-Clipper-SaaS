@@ -15,7 +15,7 @@
 
 <br/>
 
-**Deployed App:** [https://your-live-app-link.com](https://ai-podcast-clipper-frontend-kk.vercel.app/)  
+**Deployed App:** [Live Demo](https://ai-podcast-clipper-frontend-kk.vercel.app/)  
 <br/>
 
 </div>
@@ -67,7 +67,7 @@ Hey 👋 this one's fun. It's a full-stack AI tool that turns long podcasts into
 
 Built everything from scratch: AI models, background queues, credit/payments, auth, serverless GPU backend — all wired together into one smooth dashboard. Runs fully in the cloud and uses only free services, so anyone can try it without paying a cent.
 
-Features
+***Features***
 
 - 🧠 Detects viral moments using Gemini 2.5 (stories, questions, etc.)
 - 📝 Transcribes full audio using WhisperX
@@ -84,7 +84,14 @@ Features
 - 🌐 FastAPI backend for processing and transcribing
 - ☁️ Uses AWS S3 for video storage and clip output
 
-## 📊 Project Flow (Preview)
+---
+
+## Demo Walkthrough
+
+https://github.com/user-attachments/assets/a706654b-e10e-4901-81b6-2f765202b91a
+
+
+## Project Flow (Preview)
 
 Here's a quick preview of how everything connects under the hood — from video upload, clip generation, queue processing, to Stripe purchases and serverless GPUs.
 
@@ -261,7 +268,9 @@ IAM user policy to upload, download and list bucket items:
 
 [Create an API key for Gemini](https://ai.google.dev/gemini-api/docs/quickstart?lang=python)
 
-# Videos used for testing / thumbnail
+---
+
+## Videos used for testing
 
 [MI6 Secret Agent Talks About the World's Darkest Secrets](https://www.youtube.com/watch?v=-vMgbJ6WqN4)
 
